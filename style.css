@@ -1,0 +1,367 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background: hsl(0, 0%, 98%);
+}
+
+header {
+  padding: 5px;
+  width: 95%;
+  margin: 10px auto 5px auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header-logo > img {
+  height: auto;
+  width: auto;
+  margin: 10px 0 0 0;
+}
+
+div.menus {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+}
+.left-header {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  column-gap: 50px;
+  width: auto;
+}
+.features,
+.company {
+  background: none;
+  position: relative;
+}
+#features,
+#company {
+  background: none;
+  outline: none;
+  border: none;
+  padding: 8px;
+  font-weight: 550;
+  font-size: 17px;
+  color: grey;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+ul.features-list {
+  background: none;
+  box-shadow: 1px 1px 20px -10px hsl(0, 0%, 8%);
+  padding: 10px;
+  right: 10px;
+  border-radius: 10px;
+  position: absolute;
+  display: none;
+}
+ul.company-list {
+  background: none;
+  box-shadow: 1px 1px 20px -10px hsl(0, 0%, 8%);
+  padding: 10px 15px;
+  border-radius: 10px;
+  left: 10px;
+  display: none;
+  position: absolute;
+}
+
+button#features:hover,
+button#company:hover,
+.right-header > a:hover,
+.career-about:hover > a:hover {
+  color: black;
+}
+
+button#company:hover ~ ul.company-list,
+button#features:hover ~ ul.features-list {
+  display: block;
+}
+ul > li {
+  list-style: none;
+  margin: 10px;
+  width: 100%;
+  background: none;
+}
+ul > li a {
+  text-decoration: none;
+  display: flex;
+  color: grey;
+  font-size: 12px;
+}
+ul > li a > img {
+  margin: 0 20px 0 0;
+}
+
+.career-about {
+  display: grid;
+  grid-template-columns: auto auto;
+  column-gap: 25px;
+}
+
+.career-about > a {
+  text-decoration: none;
+  font-family: sans-serif;
+  border-radius: 10px;
+  outline: none;
+  border: none;
+  padding: 8px;
+  font-size: 17px;
+  color: grey;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.right-header {
+  width: 17%;
+  height: 45px;
+  display: flex;
+  justify-content: space-between;
+  padding: 2px;
+}
+.right-header > a {
+  background: none;
+  outline: none;
+  padding: 8px;
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+  color: grey;
+  font-size: 17px;
+  text-decoration: none;
+}
+#register {
+  border: 1px solid grey;
+  padding: 10px 25px;
+}
+#register:hover {
+  border: 2px solid black;
+  padding: 10px 25px;
+}
+
+div.mobile-hamburger {
+  display: none;
+}
+button.right-logo {
+  background: none;
+  padding: 5px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* styling for the main section of the page */
+main {
+  background: none;
+  padding: 5px;
+  width: 80%;
+  margin: 30px auto 0 auto;
+  display: flex;
+  flex-direction: row-reverse;
+  height: auto;
+  justify-content: space-between;
+}
+div.container {
+  background: none;
+  width: 45%;
+  margin-top: 50px;
+}
+
+div.container > h1 {
+  font-family: "Epilogue", sans-serif;
+  font-size: 80px;
+  background: none;
+  margin: 36px 0 10px 0;
+}
+div.container > p {
+  color: hsl(0, 0%, 41%);
+  background: none;
+  margin: 50px auto;
+  font-family: "Epilogue", sans-serif;
+  font-size: 20px;
+  line-height: 30px;
+}
+div.container > a {
+  background: black;
+  padding: 15px;
+  border-radius: 10px;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  color: white;
+  font-size: 1.5em;
+}
+div.container > a:hover {
+  background: none;
+  border: 1px solid grey;
+  color: black;
+  font-size: 1.5em;
+  font-weight: 600;
+}
+
+div.container > .sponsor-images {
+  background: none;
+  padding: 5px;
+  margin: 80px 0 0 0;
+  display: flex;
+  justify-content: space-between;
+}
+div.container > .sponsor-images > a {
+  text-decoration: none;
+}
+
+div.container-image {
+  background: url("./images/image-hero-desktop.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  width: 50%;
+}
+
+/* styling for mobile view of 375px */
+@media screen and (max-width: 500px) {
+  body {
+    background: hsl(0, 0%, 98%);
+    width: 100%;
+  }
+  header {
+    width: auto;
+    background: none;
+    margin: 5px auto;
+    padding: 0;
+    position: relative;
+  }
+
+  div.mobile-hamburger {
+    display: block;
+    padding: 5px;
+    z-index: 5;
+  }
+  div.menus {
+    display: block;
+    background: white;
+    position: absolute;
+    right: 0;
+    width: 70%;
+    height: 916px;
+    padding: 0 10px;
+  }
+
+  div.left-header {
+    grid-template-columns: auto;
+    row-gap: 5px;
+    margin: 20px;
+    margin-top: 50px;
+  }
+
+  .career-about {
+    display: grid;
+    grid-template-columns: auto;
+  }
+  .career-about > a {
+    border-radius: 0;
+    margin: 5px 0;
+  }
+
+  div.right-header {
+    display: grid;
+    row-gap: 10px;
+    width: auto;
+    justify-content: center;
+    margin: auto;
+    height: auto;
+    position: relative;
+  }
+
+  button#features,
+  button#company {
+    margin: 10px 0;
+  }
+  button#company:hover ~ ul.company-list,
+  button#features:hover ~ ul.features-list {
+    display: none;
+  }
+  ul.features-list {
+    display: none;
+    box-shadow: none;
+    right: 0;
+    margin-left: 10px;
+    padding: 5px;
+    position: relative;
+  }
+  ul.company-list {
+    display: none;
+    box-shadow: none;
+    left: 0;
+    padding: 5px;
+    margin-left: 10px;
+    position: relative;
+  }
+
+  ul > li a {
+    text-decoration: none;
+    display: flex;
+    color: grey;
+    font-size: 20px;
+    padding: 5px;
+  }
+  ul > li a > img {
+    margin: 0 20px 0 0;
+    width: 10%;
+  }
+
+  div.right-header > a {
+    margin: 0 auto;
+    font-weight: 400;
+  }
+  #register {
+    padding: 10px 65px;
+    border: 2px solid grey;
+  }
+  #register:hover {
+    border: 2px solid black;
+    padding: 10px 65px;
+  }
+
+  main {
+    display: grid;
+    padding: 0;
+    margin: 0 auto;
+    /* let me size the default size for all blocks */
+    width: auto;
+    height: 916px;
+  }
+
+  div.container-image {
+    background: url("./images/image-hero-mobile.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 100%;
+    height: 100%;
+    margin: 0 0 200px 0;
+  }
+  div.container {
+    width: auto;
+    text-align: center;
+    margin-top: 0;
+  }
+  div.container > h1 {
+    font-size: 45px;
+    margin-top: 30px;
+  }
+  div.container > p {
+    margin: 50px auto;
+    font-size: 23px;
+    width: 100%;
+  }
+  div.container > a {
+    padding: 15px 20px;
+    font-size: 1.1em;
+  }
+
+  div.sponsor-images > a > img {
+    width: 65%;
+  }
+}
